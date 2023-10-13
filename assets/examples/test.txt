@@ -1,0 +1,8 @@
+Hi, this is a example for the ed(itor) Discord bot.
+ed(itor) supports line searching.
+For example:
+g/Hello/p
+will search "Hello" on all lines.
+here some lines for example:
+Hello World!
+Hello Discord!

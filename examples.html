@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ed(itor) manual: Examples</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="stylesheet" href="base.css">
+</head>
+<body>
+    <div id="title">
+        <h2>ed(itor) manual</h2>
+        <br>
+        <h3>Examples</h3>
+    </div>
+    Note: you or any other person is represented with a '&gt;' symbol<br>
+    And bot is represented with a '&lt;' symbol.<br><br>
+    <h3>Simple examples:</h3><br>
+    <b>1. Creating and editing a blank file.</b><br>
+    &gt; $ed filename<br>
+    &lt; ✅<br>
+    <img src="assets/screenshots/blank-file.png" alt="blank file example"><br><br>
+    <b>2. Editing an already existing file.</b><br>
+    &gt; $ed [insert attachment]<br>
+    &lt; (size of attachment in bytes)<br>
+    <img src="assets/screenshots/existing-file.png" alt="existing file"><br><br>
+    <b>3. Appending data:</b><br>
+    &gt; a<br>
+    Hello World!<br>
+    Goodbye, World!<br>
+    .<br>
+    &lt; (nothing)<br>
+    <img src="assets/screenshots/appending.png" alt="appending"><br><br>
+    <b>4. Deleting lines:</b><br>
+    &gt; 2,3d<br>
+    &lt; (nothing)<br>
+    <img src="assets/screenshots/deleting.png" alt="appending"><br><br>
+    <b>5. Write (upload the whole file) and quit.</b><br>
+    &gt; wq<br>
+    &lt; (size of the new edited file in bytes) [attachment]<br>
+    <img src="assets/screenshots/write-quit.png" alt="write quit"><br><br>
+    <h3>Advanced examples:</h3><br>
+    <b>1. Creating a file named "sample.txt", with the contents of "Hello World!" and then quit.</b><br>
+    &gt; $ed sample.txt<br>
+    &lt; ✅<br>
+    &gt; a<br>
+    "Hello World!"<br>
+    .<br>
+    wq<br>
+    &lt; 13 [attachment]<br>
+    <img src="assets/screenshots/complex 1.png" alt="first complex example"><br><br>
+    <b>2. Find a line including "Hello" on them</b><br>
+    &gt; $ed [<a href="assets/examples/test.txt">attachment</a>]<br>
+    &lt; 200<br>
+    &gt; g/Hello/p<br>
+    &lt; [query result attachment]<br>
+    &gt; q<br>
+    &lt; ✅<br>
+    <img src="assets/screenshots/complex 2.png" alt="second complex example"><br><br>
+    <b>3. Replaces all lines that includes "Hello" to "Goodbye,"</b><br>
+    &gt; $ed [<a href="assets/examples/test.txt">attachment</a>]<br>
+    &lt; 200<br>
+    &gt; r/Hello/Goodbye,<br>
+    &lt; (last replaced line which is) Goodbye, Discord!<br>
+    &gt; wq<br>
+    &lt; (the new edited attachment size which is) 212 [edited attachment]<br>
+    <img src="assets/screenshots/complex 3.png" alt="third complex example"><br><br>
+</body>
