@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'aurulent_sans_monoregular';
+    src: url('/assets/fonts/aurulentsansmono-regular-webfont.woff2') format('woff2'),
+        url('/assets/fonts/aurulentsansmono-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html, body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+body{
+    font-family: 'aurulent_sans_monoregular', sans-serif;
+    color: #FCFCFC;
+    background-color: #232627;
+}
+
+h2,h3{
+    display: contents;
+}
+#title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
